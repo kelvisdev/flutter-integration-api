@@ -1,0 +1,110 @@
+{
+  "uuid": "3b65f062-58f0-4e10-abed-b63921cff6dc",
+  "lastMigration": 27,
+  "name": "Moockon FIA",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8081,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "d1c02ebb-72e0-451f-82a6-9ddfdd7ad83a",
+      "type": "http",
+      "documentation": "Buscar colabores",
+      "method": "get",
+      "endpoint": "collaborators",
+      "responses": [
+        {
+          "uuid": "502cb1d7-5880-4706-aad5-398dd2b7ee80",
+          "body": "[ \n  {\n    \"id\": 1,\n    \"name\": \"Colaborador 1\",\n    \"role\": \"Associate Consultant\"  \n  },\n  {\n    \"id\": 2,\n    \"name\": \"Colaborador 2\",\n    \"role\": \"Consultant\"  \n  },\n  {\n    \"id\": 3,\n    \"name\": \"Colaborador 3\",\n    \"role\": \"Senior Consultant\"  \n  },\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "4d1aace3-2ab5-4af1-a7fa-a81c147cb708",
+      "type": "http",
+      "documentation": "Buscar colabores",
+      "method": "get",
+      "endpoint": "collaborators/1",
+      "responses": [
+        {
+          "uuid": "4983ece9-6feb-4881-a527-65124f75926d",
+          "body": " {\n    \"id\": 3,\n    \"name\": \"Colaborador 3\",\n    \"role\": \"Senior Consultant\"  \n  }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "d1c02ebb-72e0-451f-82a6-9ddfdd7ad83a"
+    },
+    {
+      "type": "route",
+      "uuid": "4d1aace3-2ab5-4af1-a7fa-a81c147cb708"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
